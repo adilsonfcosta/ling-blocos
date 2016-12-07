@@ -5,31 +5,30 @@
  */
 package br.ufpr.lingblocos.apresentacao.desktop.mouseadapters;
 
-import br.ufpr.lingblocos.apresentacao.desktop.teladesenho.TelaDesenho;
-import br.ufpr.lingblocos.logicapalco.Elipse;
-import br.ufpr.lingblocos.logicapalco.Palco;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import br.ufpr.lingblocos.apresentacao.desktop.teladesenho.TelaDesenho;
+import br.ufpr.lingblocos.logicapalco.LinhaReta;
+import br.ufpr.lingblocos.logicapalco.Palco;
 
 /**
  *
- * @author Helio
+ * @author Adilson
  */
-public class MouseAdapterElipse extends MouseAdapterFigura {
+public class MouseAdapterLinhaReta extends MouseAdapterFigura {
 
-    public MouseAdapterElipse(TelaDesenho telaDesenho, Palco palco) {
+    public MouseAdapterLinhaReta(TelaDesenho telaDesenho, Palco palco) {
         super(telaDesenho, palco);
     }
 
- 
     @Override
     public void mouseReleased(MouseEvent e) {
         if (pressed) {
-            pressed = false;          
+            pressed = false;
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
-            palco.inserirAtor(new Elipse(x, y, e.getX() - x, e.getY() - y));
-            tela.desenhaElipse(x, y, e.getX() - x, e.getY() - y);
+            palco.inserirAtor(new LinhaReta(x, y));
+            tela.desenhaLinhaReta(x, y);
         }
     }
+    
 }

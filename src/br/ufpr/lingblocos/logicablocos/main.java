@@ -32,9 +32,6 @@ import java.util.Map;
 
 
 public class main {
-
-   
-
     /**
      * @param args the command line arguments
      */
@@ -85,7 +82,6 @@ public class main {
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.REPITA, new MouseAdapterRepita(telaBlocos));
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.ESPERE, new MouseAdapterEspere(telaBlocos));       
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.SOMA, new MouseAdapterSoma(telaBlocos));
-       
        
        janela.setupMouseAdaptersBlocos(relacaoOpcaoBlocoMouse);
        

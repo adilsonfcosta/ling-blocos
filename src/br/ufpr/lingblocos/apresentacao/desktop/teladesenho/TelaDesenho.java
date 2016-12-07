@@ -15,6 +15,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import br.ufpr.lingblocos.util.Observer;
+import java.awt.Polygon;
 
 /**
  *
@@ -88,7 +89,7 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLACK);
         g.drawRect(x, y, largura, altura);
-        tela.repaint();
+        tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());        
     }
 
     public void desenhaElipse(int x, int y, int largura, int altura) {
@@ -98,21 +99,30 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
     }
 
-    public int getHeight() {
-        return tela.getHeight();
-    }
-
-    public int getWidth() {
-        return tela.getWidth();
-    }
-
-    public void desenhaTriangulo(int x, int y, int i, int i0) {
+    public void desenhaTriangulo(int x, int y, int pontoX, int pontoY) {
+        
+        double distancia;
+        
+        Polygon poligono = new Polygon();
+        
+        int a = (x + pontoX) / 2;
+        int b = (y + pontoY) / 2;
+        poligono.addPoint(x, y);
+        poligono.addPoint(a,b);
+        poligono.addPoint(pontoX, y);
+        
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLACK);
-        g.drawString("TRIANGULO", x, y);
+        g.drawPolygon(poligono);
+        //g.drawString("TRIANGULO", x, y);
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
-        
-
+    }
+    
+    public void desenhaLinhaReta(int x, int y) {
+        Graphics2D g = imagemAtual.createGraphics();
+        g.setColor(Color.BLACK);
+        g.drawString("LINHA RETA", x, y);
+        tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
     }
     
     public final void limpaTela(){
@@ -122,6 +132,15 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         g.fillRect(0, 0,tela.getWidth(), tela.getHeight());
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
     }
+    
+    public int getHeight() {
+        return tela.getHeight();
+    }
+
+    public int getWidth() {
+        return tela.getWidth();
+    }
+    
 }
     
     

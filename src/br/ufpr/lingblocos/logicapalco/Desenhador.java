@@ -8,22 +8,14 @@ package br.ufpr.lingblocos.logicapalco;
 
 public interface Desenhador {
     
-    void desenhaElipse(int x, int y, int largura, int altura);
-    
+    public void desenhaElipse(int x, int y, int largura, int altura);
+    public void desenhaRetangulo(int x, int y,int largura, int altura);   
+    public void desenhaTriangulo(int x, int y, int pontoX, int pontoY);
+    public void desenhaLinhaReta(int x, int y);    
     public void desenhaEstrela();
-    
     public void desenhaImagem();
-    
     public void desenhaLinhaLivre();
-    
-    public void desenhaLinhaReta();
-    
     public void desenhaPoligono();
-    
-    public void desenhaRetangulo();
-    
-    public void desenhaTriangulo();
-
     public void limpaTela();
     
     

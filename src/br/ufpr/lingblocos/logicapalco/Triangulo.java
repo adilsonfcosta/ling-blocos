@@ -11,15 +11,18 @@ package br.ufpr.lingblocos.logicapalco;
  */
 public class Triangulo extends Ator {
     
-    private Desenhador desenhador;
-
-    public Triangulo(int x, int y) {
+    private int pontoX;
+    private int pontoY;
+    
+    public Triangulo(int x, int y, int pontoX, int pontoY) {
         super(x, y);
+        this.pontoX = pontoX;
+        this.pontoY = pontoY;
     }
 
     @Override
     public void desenhar() {
-        desenhador.desenhaTriangulo();
+        desenhador.desenhaTriangulo(x,y, pontoX, pontoY);
     }
 
     @Override

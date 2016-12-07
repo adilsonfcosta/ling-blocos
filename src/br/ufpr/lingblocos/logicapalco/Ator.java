@@ -35,8 +35,4 @@ public abstract class Ator {
     public void setPalco(Palco palco) {
         this.palco = palco;
     }
-    
-    
-    
-    
 }

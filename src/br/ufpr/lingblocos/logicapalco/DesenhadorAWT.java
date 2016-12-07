@@ -15,8 +15,6 @@ public class DesenhadorAWT implements Desenhador{
     public DesenhadorAWT(TelaDesenho telaDesenho) {
         this.telaDesenho = telaDesenho;
     }
-    
-    
         
     @Override
     public void desenhaElipse(int x, int y, int largura, int altura) {
@@ -39,8 +37,8 @@ public class DesenhadorAWT implements Desenhador{
     }
 
     @Override
-    public void desenhaLinhaReta() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void desenhaLinhaReta(int x, int y) {
+        telaDesenho.desenhaLinhaReta(x, y);
     }
 
     @Override
@@ -49,13 +47,13 @@ public class DesenhadorAWT implements Desenhador{
     }
 
     @Override
-    public void desenhaRetangulo() {
-        
+    public void desenhaRetangulo(int x, int y, int largura, int altura) {
+        telaDesenho.desenhaRetangulo(x, y, largura, altura);
     }
 
     @Override
-    public void desenhaTriangulo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void desenhaTriangulo(int x, int y, int pontoX, int pontoY) {
+        telaDesenho.desenhaTriangulo(x, y, pontoX, pontoY);
     }
 
     @Override

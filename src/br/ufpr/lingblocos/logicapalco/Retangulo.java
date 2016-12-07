@@ -11,8 +11,6 @@ package br.ufpr.lingblocos.logicapalco;
  */
 public class Retangulo extends Ator {
     
-    private Desenhador desenhador;
-    
     private int largura;
     private int altura;
     
@@ -24,7 +22,7 @@ public class Retangulo extends Ator {
 
     @Override
     public void desenhar() {
-        desenhador.desenhaRetangulo();
+        desenhador.desenhaRetangulo(x, y, largura, altura);
     }
 
     @Override

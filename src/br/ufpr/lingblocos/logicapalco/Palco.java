@@ -14,17 +14,13 @@ import java.util.List;
  */
 public class Palco {
         
-     Desenhador desenhador;   
-    
-     
+    Desenhador desenhador;   
      
     private List<Ator> atores = new LinkedList();
 
     public Palco(Desenhador desenhador) {
         this.desenhador = desenhador;
     }
-    
-    
     
     public void selecionarAtor(int x, int y) {
         System.out.println(x +" " +y);

@@ -10,6 +10,7 @@ import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterElipse;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterEspere;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterFigura;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterGire;
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterLinhaReta;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterMova;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRepita;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRetangulo;
@@ -34,11 +35,11 @@ public class MainPalco {
        TelaDesenho telaDesenho = new TelaDesenho(700, 500);
        TelaBlocos telaBlocos = new TelaBlocos(500, 700);
        //TelaDesenhoController telaController = new TelaDesenhoController(telaDesenho);
-       JanelaPrincipal janela = new JanelaPrincipal(telaDesenho, 
-               telaBlocos, 800, 600);
+       JanelaPrincipal janela = new JanelaPrincipal(telaDesenho, telaBlocos, 800, 600);
        Desenhador desenhador = new DesenhadorAWT(telaDesenho);
        Palco palco = new Palco(desenhador);
        MouseAdapterSeleciona seleciona = new MouseAdapterSeleciona(telaDesenho, palco);
+       
        //Adicionando relação de opções de figuras com mouse listeners:
        // (vocês terão que ir adicionando à medida que novas figuras 
        // são possíveis de serem desenhadas)
@@ -46,6 +47,7 @@ public class MainPalco {
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETANGULO, new MouseAdapterRetangulo(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.ELIPSE, new MouseAdapterElipse(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.TRIANGULO, new MouseAdapterTriangulo(telaDesenho, palco));
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETA, new MouseAdapterLinhaReta(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.SELECAO, seleciona);
        janela.setupMouseAdaptersFigura(relacaoOpcaoFiguraMouse);
        
