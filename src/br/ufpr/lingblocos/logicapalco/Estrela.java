@@ -24,7 +24,7 @@ public class Estrela extends Ator  {
     }
 
     @Override
-    public void dentro(int x, int y) {
+    public boolean dentro(int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

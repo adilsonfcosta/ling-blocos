@@ -21,7 +21,7 @@ public abstract class Ator {
     }
 
     public abstract void desenhar();
-    public abstract void dentro(int x, int y);
+    public abstract boolean dentro(int x, int y);
 
     public void setDesenhador(Desenhador desenhador) {
         this.desenhador = desenhador;
