@@ -30,9 +30,7 @@ public class MouseAdapterRetangulo extends MouseAdapterFigura {
             tela.desenhaRetangulo(x, y, e.getX() - x, e.getY() - y);
         }
     }
+   
     
-
     
-    
-
 }
