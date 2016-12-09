@@ -16,7 +16,7 @@ import java.util.Map;
 public abstract class BlocoExecutavel implements Bloco{
     
    protected Ator ator;
-     protected Map<String,Campo> campos = new HashMap<String, Campo>();
+   protected Map<String,Campo> campos = new HashMap<String, Campo>();
    
     
    public abstract void executar();
@@ -24,6 +24,12 @@ public abstract class BlocoExecutavel implements Bloco{
     public void setAtor(Ator ator) {
         this.ator = ator;
     }
+    
+    
+    public Ator getAtor(){
+        return this.ator;
+    }
+    
     
       @Override
     public void atualizaCampo(String nome, Object valor) {

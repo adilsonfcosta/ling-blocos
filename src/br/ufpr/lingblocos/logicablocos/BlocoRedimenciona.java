@@ -12,12 +12,27 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  * @author helio
  */
 public class BlocoRedimenciona extends BlocoSimples{
+    
+    public BlocoRedimenciona(){
+        
+        campos.put("rx",new Campo<>(0));
+        campos.put("ry",new Campo<>(0));
+    }
 
 
 
     @Override
     public void executar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Integer rx, ry;
+        
+        rx = (Integer) campos.get("rx").getValor();
+        ry = (Integer) campos.get("ry").getValor();
+        
+        //EU ACHO QUE AQUI CHAMA A FUNÇÃO DO ATOR
+        
+        
+        
     }
     
 }
