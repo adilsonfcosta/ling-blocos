@@ -13,6 +13,8 @@ public class Retangulo extends Ator {
     
     private int largura;
     private int altura;
+    private int x_clique;
+    private int y_clique;
     
     public Retangulo(int x, int y, int largura, int altura) {
         super(x, y);
@@ -27,18 +29,27 @@ public class Retangulo extends Ator {
 
     @Override
     public boolean dentro(int x, int y) {
-        boolean a = (x > this.x && 
-                x < this.largura &&  
-                y > this.y
-                && y < this.altura); 
-        return a;
-    }
+        x_clique = x;
+        y_clique = y;
+        
+        return(x > this.x && 
+               x < (this.x + this.largura) &&  
+               y > this.y &&
+               y < (this.altura + this.y)); 
+    } 
 
     @Override
     public String toString() {
-        return "Retangulo{" + "largura=" + largura + ", altura=" + altura + '}';
+        return x_clique +":"+ y_clique +"<< Retangulo {x:" + this.x + ", y:" + this.y + ", l:" + (this.x + this.largura) + ", a:" + (this.altura + this.y) + '}';
     }
     
     
     
 }
+
+
+
+
+
+
+
