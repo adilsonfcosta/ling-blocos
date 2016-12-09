@@ -14,7 +14,7 @@ import br.ufpr.lingblocos.logicapalco.Ator;
 public class BlocoEspere extends BlocoSimples{
 
     public BlocoEspere(){
-        campos.put("t",new Campo<>(0.0));
+        campos.put("t",new Campo<>(0));
     }
 
     
@@ -22,7 +22,7 @@ public class BlocoEspere extends BlocoSimples{
     @Override
     public void executar() {
         try {
-            Thread.sleep((long) campos.get("t").getValor()*1000);
+            Thread.sleep((long) campos.get("t").getValor()*1000l);
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }

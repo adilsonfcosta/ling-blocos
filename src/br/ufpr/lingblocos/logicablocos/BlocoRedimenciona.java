@@ -30,7 +30,7 @@ public class BlocoRedimenciona extends BlocoSimples{
         ry = (Integer) campos.get("ry").getValor();
         
         //EU ACHO QUE AQUI CHAMA A FUNÇÃO DO ATOR
-        ator.redimencionaAtor(rx,ry); // IMPLEMENTAR ESSA FUNÇÃO NO PAINEL 
+        ator.redimencionaAtor(rx,ry); 
         
         
     }

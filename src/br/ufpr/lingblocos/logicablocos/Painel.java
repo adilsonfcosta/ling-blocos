@@ -46,8 +46,7 @@ public class Painel {
         //TODO... Façam o resto
         blocoComposto.inserirBloco(blocoLogica0); //VER
         blocos.remove(blocoLogica0); // VERIFICAR SE OS BLOCOS DO PAINEL MENCIONADO É O "blocos"
-        
-//        blocoComposto.removerBloco(blocoLogica0); 
+      
        
  
         
@@ -64,10 +63,39 @@ public class Painel {
     public BlocoComposto criaComposto(Bloco blocoLogica) {
         BlocoComposto blocoComposto = new BlocoComposto();
         
-        //TODO...
+        blocoComposto.inserirBloco(blocoLogica);
+        blocos.remove(blocoLogica);
         
         return blocoComposto;
         
+    }
+
+    /**
+     * Exclui o bloco composto e retira blocos restantes de dentro dele.
+     * Chamada do desembrulha() do TelaBlocos
+     * @param blocoLogica (deve ser um bloco composto)
+     */
+    public void desfazerComposto(Bloco blocoLogica) {
+        BlocoComposto blocoComposto = (BlocoComposto) blocoLogica;
+      
+        //TODO... Façam o resto
+        blocos.add(blocoLogica);
+        blocos.remove(blocoComposto);
+    
+    }
+
+    /**
+     * retira um bloco de um bloco composto
+     * Chamada no método removerDoPainel do TelaBlocos
+     * @param blocoLogica
+     * @param blocoLogica0 (deve ser um bloco composto)
+     */
+    public void desencaixar(Bloco blocoLogica, Bloco blocoLogica0) {
+        BlocoComposto blocoComposto = (BlocoComposto) blocoLogica0;
+        
+        //TODO... Façam o resto
+        blocoComposto.removerBloco(blocoLogica);
+        blocos.add(blocoLogica);
     }
     
     

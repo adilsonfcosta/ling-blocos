@@ -8,6 +8,7 @@ package br.ufpr.lingblocos.apresentacao.desktop.blocos.swing;
 import br.ufpr.lingblocos.apresentacao.desktop.telablocos.swing.TelaBlocos;
 import br.ufpr.lingblocos.logicablocos.Bloco;
 import br.ufpr.lingblocos.util.DoubleTransformer;
+import br.ufpr.lingblocos.util.IntegerTransformer;
 import java.awt.Color;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -29,14 +30,14 @@ public class BlocoEspere extends BlocoSimples implements BlocoComCampos{
 
     @Override
     public void addCampos() {
-        BlocoCaixaTexto<Double> caixa = new BlocoCaixaTexto("t", "0", new DoubleTransformer());
+        BlocoCaixaTexto<Double> caixa = new BlocoCaixaTexto("t", "0", new IntegerTransformer());
         campos.addOriginal(caixa);
         caixa.setBounds(70, 10, 20, 20);
     }
 
      @Override
-    public Iterator<Encaixavel> getCampos() {
-        return campos.getCampos();
+    public Iterator<Encaixavel> getCamposIterator() {
+        return campos.getCamposIterator();
     }
 
     @Override
@@ -47,6 +48,11 @@ public class BlocoEspere extends BlocoSimples implements BlocoComCampos{
     @Override
     public void trocaCampo(Encaixavel antigo, Encaixavel novo) {
         campos.trocaCampo(antigo, novo);
+        this.getBlocoLogica().trocaCampo("t",novo.getBlocoLogica());
+    }
+
+    public Campos getCampos() {
+        return campos;
     }
 
     

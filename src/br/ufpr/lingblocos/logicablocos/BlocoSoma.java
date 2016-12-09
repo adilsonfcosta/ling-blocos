@@ -11,40 +11,37 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  *
  * @author helio
  */
-public class BlocoSoma extends BlocoEncaixavel<Double>{
+public class BlocoSoma extends BlocoEncaixavel<Integer>{
     
-    
-    
-    
-    BlocoEncaixavel<Double> a;//igual bloco mova porem com a e b no lugar dx,dy
-    BlocoEncaixavel<Double> b;//bloco campo
-
-    
-    
-    public BlocoSoma(Double valor) {
+    public BlocoSoma(Integer valor) {
         super(valor);
+        campos.put("a",new Campo<>(0));
+        campos.put("b",new Campo<>(0));
     }
 
     public BlocoSoma() {
-        super(0.0);
+        this(0);
     }
     
     
-
-    public void setA(BlocoEncaixavel<Double> a) {
-        this.a = a;
-    }
-
-    public void setB(BlocoEncaixavel<Double> b) {
-        this.b = b;
-    }
-    
-    
-
     @Override
-    public Double getValor() {
-        return a.getValor() + b.getValor();
+    public Integer getValor() {
+        return (Integer) campos.get("a").getValor()+ (Integer)campos.get("b").getValor();
+   
     }
+    
+
+//    public void setA(BlocoEncaixavel<Double> a) {
+//        this.a = a;
+//    }
+//
+//    public void setB(BlocoEncaixavel<Double> b) {
+//        this.b = b;
+//    }
+    
+    
+
+   
 
  
   

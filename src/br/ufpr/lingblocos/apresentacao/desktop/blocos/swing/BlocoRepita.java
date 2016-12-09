@@ -35,7 +35,9 @@ public class BlocoRepita extends BlocoEnvolvedor implements BlocoComCampos{
      @Override
      public void addCampos() {
         BlocoCaixaTexto<Integer> caixa = new BlocoCaixaTexto("vezes", "100", new IntegerTransformer());
+        getBloco().remove(cabecalho);
         campos.addOriginal(caixa);
+        getBloco().add(cabecalho);
         caixa.setBounds(70, 10, 20, 20);
      }
 
@@ -49,7 +51,11 @@ public class BlocoRepita extends BlocoEnvolvedor implements BlocoComCampos{
         campos.trocaCampo(antigo, novo);
     }
      @Override
-    public Iterator<Encaixavel> getCampos() {
-        return campos.getCampos();
+    public Iterator<Encaixavel> getCamposIterator() {
+        return campos.getCamposIterator();
+    }
+    
+    public Campos getCampos() {
+        return campos;
     }
 }

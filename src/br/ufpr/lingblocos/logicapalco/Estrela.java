@@ -28,10 +28,7 @@ public class Estrela extends Ator  {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void moverAtor(Integer dx, Integer dy) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
     @Override
     public void redimencionaAtor(Integer rx, Integer ry) {

@@ -21,12 +21,12 @@ public class BlocoRepita extends BlocoEnvolvedor {
     public void executar() {
         for (int i = 0; i < (int) campos.get("vezes").getValor(); i++) {
              
-           //TODO... Insira o codigo pra executar os blocos de dentro
-           // PERCORRER A LISTA E EXECUTAR UM A UM
-           // PORÉM COMO TER ACESSO A LISTA ?     
-           blocoExe.get(i).executar();// VERIFICAR 
-        
-           
+ 
+           //fazer um novo for para percorrer a lista
+           for ( BlocoExecutavel b: blocoExe ){
+               b.executar();
+           }
+             
            //parte que faz nao repetir tão rapido:
            try {
                 Thread.sleep(10);                 //1000 milliseconds is one second.

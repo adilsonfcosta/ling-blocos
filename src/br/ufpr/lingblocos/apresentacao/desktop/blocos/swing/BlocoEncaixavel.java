@@ -29,10 +29,13 @@ public abstract class BlocoEncaixavel<T> implements BlocoArrastavel<JButton>,Enc
     private JButton bloco;
     private BlocoArrastavel pai = null;
     private TelaBlocos tela;
+    private String name;
+    protected Bloco blocoLogica;
     
     public BlocoEncaixavel(TelaBlocos tela, String label, Color cor, Bloco blocoLogica) {
         
         this.tela = tela;
+        this.name = label;
         bloco = new JButton();
       
         bloco.setBorder(new LineBorder(cor, 3));
@@ -41,9 +44,15 @@ public abstract class BlocoEncaixavel<T> implements BlocoArrastavel<JButton>,Enc
         bloco.setText(label);
         bloco.setVerticalAlignment(SwingConstants.TOP);
         bloco.setHorizontalAlignment(SwingConstants.CENTER);
+        this.blocoLogica = blocoLogica;
         
         setMouseAdapter(new ArrastavelEncaixavelAdapter(this,tela));
         
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
   
@@ -57,6 +66,12 @@ public abstract class BlocoEncaixavel<T> implements BlocoArrastavel<JButton>,Enc
     public JButton getBloco() {
         return bloco;
     }
+
+    public Bloco getBlocoLogica() {
+        return blocoLogica;
+    }
+    
+    
 
     @Override
     public Iterator<BlocoArrastavel> iterator() {
