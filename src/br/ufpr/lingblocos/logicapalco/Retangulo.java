@@ -27,10 +27,11 @@ public class Retangulo extends Ator {
 
     @Override
     public boolean dentro(int x, int y) {
-        return (x >= this.x && 
-                y <= this.y && 
-                x <= (this.x + this.largura) 
-                && y >= (this.y - this.altura)); 
+        boolean a = (x > this.x && 
+                x < this.largura &&  
+                y > this.y
+                && y < this.altura); 
+        return a;
     }
 
     @Override
