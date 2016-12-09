@@ -13,9 +13,16 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  */
 public class BlocoSoma extends BlocoEncaixavel<Double>{
     
-    BlocoEncaixavel<Double> a;
-    BlocoEncaixavel<Double> b;
+    public BlocoSoma() {
+        campos.put("dx",new Campo<>(0));
+        campos.put("dy",new Campo<>(0));
+}
+    
+  //  BlocoEncaixavel<Double> a;//igual bloco mova porem com a e b no lgar dx,dy
+   // BlocoEncaixavel<Double> b;//bloco campo
 
+    
+    
     public BlocoSoma(Double valor) {
         super(valor);
     }

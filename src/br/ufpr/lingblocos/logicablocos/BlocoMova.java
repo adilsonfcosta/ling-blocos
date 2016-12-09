@@ -22,6 +22,9 @@ public class BlocoMova extends BlocoSimples{
     
     @Override
     public void executar() {
+        
+        
+        
         //TODO, alguma coisa( com ...( Integer) campos.get("dx").getValor(),
         //        (Integer) campos.get("dy").getValor());
     }
