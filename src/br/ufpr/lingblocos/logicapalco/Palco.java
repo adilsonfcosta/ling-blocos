@@ -23,16 +23,16 @@ public class Palco {
     }
     
     public void selecionarAtor(int x, int y) {
-        System.out.println(x +" " +y);
-        
+        //System.out.println(x+ " " +y);
+                
         for (Ator a : atores) {
             if (a.dentro(x, y)) {
                 System.out.println("TO DENTRO >>" + a.toString());   
             } else {
                 System.out.println("to fora >>" + a.toString());   
-            }           
+            }
         }
-       
+        System.out.println("\n ");
     }
 
     public void inserirAtor(Ator ator) {
@@ -47,7 +47,7 @@ public class Palco {
         for (Ator a: atores) {
             a.desenhar();
         }
-        System.out.println(atores);
+        //System.out.println(atores);
     }
     
 }
