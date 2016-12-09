@@ -21,6 +21,14 @@ public class BlocoComposto extends BlocoExecutavel {
 
     public void inserirBloco(Bloco blocoLogica) {
         blocoExe.add((BlocoExecutavel) blocoLogica);
+       
     }
+    
+    
+    //FEITO 09/12 
+    public void removerBloco(Bloco blocoLogica){
+        blocoExe.remove((BlocoExecutavel) blocoLogica);
+    }
+    
     
 }

@@ -42,8 +42,15 @@ public class Painel {
     public void juntarBlocos(Bloco blocoLogica, Bloco blocoLogica0) {
        
         BlocoComposto blocoComposto = (BlocoComposto) blocoLogica;
-      
+        
         //TODO... Façam o resto
+        blocoComposto.inserirBloco(blocoLogica0); //VER
+        blocos.remove(blocoLogica0); // VERIFICAR SE OS BLOCOS DO PAINEL MENCIONADO É O "blocos"
+        
+//        blocoComposto.removerBloco(blocoLogica0); 
+       
+ 
+        
     }
     
     

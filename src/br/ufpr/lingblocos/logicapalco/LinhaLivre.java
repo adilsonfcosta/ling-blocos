@@ -35,6 +35,11 @@ public class LinhaLivre extends Ator {
     public void moverAtor(Integer dx, Integer dy) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void redimencionaAtor(Integer rx, Integer ry) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
 
