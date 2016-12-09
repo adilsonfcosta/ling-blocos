@@ -22,6 +22,8 @@ public abstract class Ator {
 
     public abstract void desenhar();
     public abstract boolean dentro(int x, int y);
+    public abstract void moverAtor(Integer dx, Integer dy); // POSSO ADICIONAR DIRETO NA INTERFACE?
+   
 
     public void setDesenhador(Desenhador desenhador) {
         this.desenhador = desenhador;

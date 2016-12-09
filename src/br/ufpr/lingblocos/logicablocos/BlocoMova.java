@@ -29,8 +29,8 @@ public class BlocoMova extends BlocoSimples{
         dx = (Integer) campos.get("dx").getValor();
         dy = (Integer) campos.get("dy").getValor();
         
-        //EU ACHO QUE AQUI CHAMA A FUNÇÃO
-        
+        //EU ACHO QUE AQUI CHAMA A FUNÇÃO 
+        ator.moverAtor(dx,dy); // TEM QUE IMPLEMENTAR ESSA FUNÇÃO
      
         
         //TODO, alguma coisa( com ...( Integer) campos.get("dx").getValor(),

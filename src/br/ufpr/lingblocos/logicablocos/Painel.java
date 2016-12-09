@@ -21,10 +21,13 @@ public class Painel {
         this.ator = ator;
     }
     
+    
+    
     public void inserirBloco(Bloco bloco){
        blocos.add(bloco);
        bloco.setAtor(ator);
        System.out.println(blocos);
+       
     }
     
 
