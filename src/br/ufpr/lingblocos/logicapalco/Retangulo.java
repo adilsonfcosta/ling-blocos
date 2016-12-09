@@ -27,8 +27,17 @@ public class Retangulo extends Ator {
 
     @Override
     public boolean dentro(int x, int y) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return true;
+        return (x >= this.x && 
+                y <= this.y && 
+                x <= (this.x + this.largura) 
+                && y >= (this.y - this.altura)); 
     }
+
+    @Override
+    public String toString() {
+        return "Retangulo{" + "largura=" + largura + ", altura=" + altura + '}';
+    }
+    
+    
     
 }
