@@ -42,9 +42,6 @@ public class Retangulo extends Ator {
     public String toString() {
         return x_clique +":"+ y_clique +"<< Retangulo {x:" + this.x + ", y:" + this.y + ", l:" + (this.x + this.largura) + ", a:" + (this.altura + this.y) + '}';
     }
-    
-    
-    
 }
 
 
