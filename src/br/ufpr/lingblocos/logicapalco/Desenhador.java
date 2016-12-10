@@ -17,6 +17,8 @@ public interface Desenhador {
     public void desenhaLinhaLivre();
     public void desenhaPoligono();
     public void limpaTela();
+
+    //--public void desenhaElipse(int x, int y, int largura, int altura, int g);
     
     
     

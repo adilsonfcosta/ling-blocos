@@ -26,7 +26,7 @@ public abstract class Ator {
     public abstract boolean dentro(int x, int y);
     public abstract void redimensionaAtor(Integer rx, Integer ry);
     
-     public abstract void gire(Integer g);
+     public abstract void gire(int g);
     
 
     public void setDesenhador(Desenhador desenhador) {

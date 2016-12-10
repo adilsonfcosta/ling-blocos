@@ -13,6 +13,7 @@ public class Elipse extends Ator{
     
     int largura;
     int altura;
+    int direcao;
     
     public Elipse(int x, int y, int largura, int altura) {
         super(x, y);
@@ -39,9 +40,9 @@ public class Elipse extends Ator{
     }
 
     @Override
-    public void gire(Integer g) {
-       
-        
+    public void gire(int g) {
+      
+        //--desenhador.desenhaElipse(x,y,largura,altura, g);
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

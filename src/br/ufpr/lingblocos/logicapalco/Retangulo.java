@@ -51,7 +51,7 @@ public class Retangulo extends Ator {
     }
 
     @Override
-    public void gire(Integer g) {
+    public void gire(int g) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
