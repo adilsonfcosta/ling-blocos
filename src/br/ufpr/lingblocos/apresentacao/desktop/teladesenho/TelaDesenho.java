@@ -131,10 +131,11 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
     }
     
-    public void desenhaLinhaReta(int x, int y) {
+    public void desenhaLinhaReta(int x, int y, int x1, int y1) {
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLACK);
-        g.drawString("LINHA RETA", x, y);
+        g.drawLine(x, y, x1, y1);
+        //g.drawString("LINHA RETA", x, y);
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());
     }
     

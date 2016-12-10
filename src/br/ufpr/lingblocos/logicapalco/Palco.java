@@ -21,6 +21,7 @@ public class Palco {
     Desenhador desenhador;
     int x_mintira;
     int y_mintira;
+
     
      
     private List<Ator> atores = new LinkedList();
@@ -40,6 +41,7 @@ public class Palco {
                 selecionados.add(a);
                 telaBlocos.setPainel(a.painel);
             }
+            System.out.println(a.toString());
         }
         
         for (Ator s : selecionados) {

@@ -11,7 +11,7 @@ public interface Desenhador {
     public void desenhaElipse(int x, int y, int largura, int altura);
     public void desenhaRetangulo(int x, int y,int largura, int altura);   
     public void desenhaTriangulo(int x, int y, int pontoX, int pontoY);
-    public void desenhaLinhaReta(int x, int y);    
+    public void desenhaLinhaReta(int x, int y, int x1, int y1);    
     public void desenhaEstrela();
     public void desenhaImagem();
     public void desenhaLinhaLivre();

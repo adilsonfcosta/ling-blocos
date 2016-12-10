@@ -21,9 +21,9 @@ public class MouseAdapterAgrupar extends MouseAdapterFigura {
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        palco.agrupar();
+            palco.agrupar();        
     }
     
-    
+
     
 }

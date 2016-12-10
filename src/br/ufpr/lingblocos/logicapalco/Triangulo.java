@@ -34,8 +34,8 @@ public class Triangulo extends Ator {
 
         return(x > this.x && 
                x < (this.x + this.pontoX) &&  
-               y > this.y &&
-               y < (this.pontoY + this.y)); 
+               y < this.y &&
+               y > (this.pontoY + this.y)); 
     } 
 
     @Override
@@ -46,7 +46,9 @@ public class Triangulo extends Ator {
 
     @Override
     public void redimensionaAtor(Integer rx, Integer ry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        pontoX += rx;
+        pontoY -= ry;
+        palco.desenhar();
     }
 
     @Override

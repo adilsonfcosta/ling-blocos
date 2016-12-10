@@ -26,8 +26,8 @@ public class MouseAdapterLinhaReta extends MouseAdapterFigura {
             pressed = false;
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
-            palco.inserirAtor(new LinhaReta(x, y));
-            tela.desenhaLinhaReta(x, y);
+            palco.inserirAtor(new LinhaReta(x, y, e.getX(), e.getY()));
+            tela.desenhaLinhaReta(x, y, e.getX(), e.getY());
         }
     }
     

@@ -15,6 +15,7 @@ import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterFigura;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterGire;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterLinhaReta;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterMova;
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRedimensiona;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRepita;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRetangulo;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterSeleciona;
@@ -68,7 +69,7 @@ public class MainPalco {
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.REPITA, new MouseAdapterRepita(telaBlocos));
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.ESPERE, new MouseAdapterEspere(telaBlocos));       
        relacaoOpcaoBlocoMouse.put(OpcaoBloco.SOMA, new MouseAdapterSoma(telaBlocos));
-       
+       relacaoOpcaoBlocoMouse.put(OpcaoBloco.REDIMENSIONA, new MouseAdapterRedimensiona(telaBlocos));
        
        janela.setupMouseAdaptersBlocos(relacaoOpcaoBlocoMouse);
        

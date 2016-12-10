@@ -11,13 +11,15 @@ package br.ufpr.lingblocos.logicapalco;
  */
 public class LinhaReta extends Ator {
     
-    public LinhaReta(int x, int y) {
+    int x1, y1;
+    
+    public LinhaReta(int x, int y, int x1, int y1) {
         super(x, y);
     }
 
     @Override
     public void desenhar() {
-        desenhador.desenhaLinhaReta(x, y);
+        desenhador.desenhaLinhaReta(x, y, this.x1, this.y1);
     }
 
     @Override

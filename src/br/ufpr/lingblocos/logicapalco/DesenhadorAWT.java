@@ -37,8 +37,8 @@ public class DesenhadorAWT implements Desenhador{
     }
 
     @Override
-    public void desenhaLinhaReta(int x, int y) {
-        telaDesenho.desenhaLinhaReta(x, y);
+    public void desenhaLinhaReta(int x, int y, int x1, int y1) {
+        telaDesenho.desenhaLinhaReta(x, y, x1, y1);
     }
 
     @Override
