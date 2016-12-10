@@ -28,7 +28,10 @@ public class Elipse extends Ator{
 
     @Override
     public boolean dentro(int x, int y) {
-        return true;
+        return(x > this.x && 
+               x < (this.x + this.largura) &&  
+               y > this.y &&
+               y < (this.altura + this.y));
     }
 
 

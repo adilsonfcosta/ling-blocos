@@ -10,7 +10,7 @@ package br.ufpr.lingblocos.logicapalco;
  * @author Lenovo
  */
 public class LinhaReta extends Ator {
-
+    
     int x1;
     int y1;    
     
@@ -26,15 +26,16 @@ public class LinhaReta extends Ator {
     }
 
     @Override
-    public boolean dentro(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean dentro(int x, int y) {      
+        return(x > this.x + 5 && y < this.y + 10);
     }
 
  
 
     @Override
     public void redimensionaAtor(Integer rx, Integer ry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        x1 += rx;
+        palco.desenhar();
     }
 
     @Override
