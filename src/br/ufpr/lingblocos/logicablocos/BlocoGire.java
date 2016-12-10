@@ -21,7 +21,7 @@ public class BlocoGire extends BlocoSimples{
     @Override
     public void executar() {
         
-        Integer g = null;
+        Integer g = (Integer) campos.get("g").getValor();
         
         ator.gire(g);// FALTA IMPLEMENTAR NO ATOR
         
