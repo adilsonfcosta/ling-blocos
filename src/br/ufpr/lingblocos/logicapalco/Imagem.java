@@ -26,5 +26,10 @@ public class Imagem extends Ator {
     public boolean dentro(int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void moverAtor(Integer dx, Integer dy) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

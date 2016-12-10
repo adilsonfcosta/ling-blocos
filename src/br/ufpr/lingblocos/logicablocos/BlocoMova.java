@@ -13,6 +13,7 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  */
 public class BlocoMova extends BlocoSimples{
 
+
     public BlocoMova(){
         campos.put("dx",new Campo<>(0));
         campos.put("dy",new Campo<>(0));
@@ -22,6 +23,16 @@ public class BlocoMova extends BlocoSimples{
     
     @Override
     public void executar() {
+        
+        Integer dx, dy;
+        
+        dx = (Integer) campos.get("dx").getValor();
+        dy = (Integer) campos.get("dy").getValor();
+        
+        //EU ACHO QUE AQUI CHAMA A FUNÇÃO 
+        ator.moverAtor(dx,dy); // TEM QUE IMPLEMENTAR ESSA FUNÇÃO
+     
+        
         //TODO, alguma coisa( com ...( Integer) campos.get("dx").getValor(),
         //        (Integer) campos.get("dy").getValor());
     }

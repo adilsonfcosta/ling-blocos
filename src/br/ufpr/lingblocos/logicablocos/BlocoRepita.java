@@ -20,7 +20,12 @@ public class BlocoRepita extends BlocoEnvolvedor {
     @Override
     public void executar() {
         for (int i = 0; i < (int) campos.get("vezes").getValor(); i++) {
+             
            //TODO... Insira o codigo pra executar os blocos de dentro
+           // PERCORRER A LISTA E EXECUTAR UM A UM
+           // PORÉM COMO TER ACESSO A LISTA ?     
+           blocoExe.get(i).executar();// VERIFICAR 
+        
            
            //parte que faz nao repetir tão rapido:
            try {

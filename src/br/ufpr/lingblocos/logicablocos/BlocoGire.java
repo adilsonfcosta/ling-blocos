@@ -13,6 +13,9 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  */
 public class BlocoGire extends BlocoSimples{
 
+//    public BlocoGire(){
+//        campos.put("g",new Campo<>(0));
+//    }
     
     
     @Override

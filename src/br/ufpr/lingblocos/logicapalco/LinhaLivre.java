@@ -14,7 +14,6 @@ import java.util.List;
 public class LinhaLivre extends Ator {
     
     private Desenhador desenhador;
-
     private List<Ponto> ponto;  
 
     public LinhaLivre(int x, int y) {
@@ -28,6 +27,11 @@ public class LinhaLivre extends Ator {
 
     @Override
     public boolean dentro(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void moverAtor(Integer dx, Integer dy) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
