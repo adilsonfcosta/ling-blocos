@@ -22,16 +22,14 @@ public abstract class Ator {
 
     public abstract void desenhar();
     public abstract boolean dentro(int x, int y);
-   // public abstract void moverAtor(Integer dx, Integer dy); // POSSO ADICIONAR DIRETO NA INTERFACE?
     public abstract void redimencionaAtor(Integer rx, Integer ry);
+    public abstract void gire(Integer g);
 
     public void setDesenhador(Desenhador desenhador) {
         this.desenhador = desenhador;
     }
 
     public void mover(Integer dx, Integer dy) {
-        // TODO... Façam o que tem que ser feito antes de mandar redesenhar.
-        
         this.x += dx;
         this.y += dy;
         

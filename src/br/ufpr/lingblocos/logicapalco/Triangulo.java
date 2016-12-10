@@ -48,5 +48,10 @@ public class Triangulo extends Ator {
     public void redimencionaAtor(Integer rx, Integer ry) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void gire(Integer g) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

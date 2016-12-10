@@ -13,14 +13,18 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  */
 public class BlocoGire extends BlocoSimples{
 
-//    public BlocoGire(){
-//        campos.put("g",new Campo<>(0));
-//    }
+    public BlocoGire(){
+        campos.put("g",new Campo<>(0));
+    }
     
     
     @Override
     public void executar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Integer g = null;
+        
+        ator.gire(g);// FALTA IMPLEMENTAR NO ATOR
+        
     }
     
 }
