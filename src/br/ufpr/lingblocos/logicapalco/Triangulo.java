@@ -13,6 +13,8 @@ public class Triangulo extends Ator {
     
     private int pontoX;
     private int pontoY;
+    private int x_clique;
+    private int y_clique;
     
     public Triangulo(int x, int y, int pontoX, int pontoY) {
         super(x, y);
@@ -27,8 +29,18 @@ public class Triangulo extends Ator {
 
     @Override
     public boolean dentro(int x, int y) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return true;
+        x_clique = x;
+        y_clique = y;
+
+        return(x > this.x && 
+               x < (this.x + this.pontoX) &&  
+               y > this.y &&
+               y < (this.pontoY + this.y)); 
+    } 
+
+    @Override
+    public String toString() {
+        return x_clique +":"+ y_clique +"<< Triângulo {x:" + this.x + ", y:" + this.y + ", l:" + (this.x + this.pontoX) + ", a:" + (this.pontoY + this.y) + '}';
     }
 
 

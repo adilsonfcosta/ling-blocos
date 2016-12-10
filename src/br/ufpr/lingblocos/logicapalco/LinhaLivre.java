@@ -14,7 +14,6 @@ import java.util.List;
 public class LinhaLivre extends Ator {
     
     private Desenhador desenhador;
-
     private List<Ponto> ponto;  
 
     public LinhaLivre(int x, int y) {
