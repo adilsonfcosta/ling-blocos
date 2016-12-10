@@ -37,6 +37,8 @@ public class Elipse extends Ator{
     public void redimensionaAtor(Integer rx, Integer ry) {
         this.largura += rx;
         this.altura += ry;
+        
+        palco.desenhar(); // GENTE ERA SÓ ISSO
     }
 
     @Override

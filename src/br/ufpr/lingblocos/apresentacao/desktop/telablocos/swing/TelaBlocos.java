@@ -19,7 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
 import br.ufpr.lingblocos.util.Observer;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  *
@@ -32,6 +34,7 @@ public class TelaBlocos implements Observer<MouseAdapterBlocos> {
     private JanelaPrincipal pai;
     private MouseAdapter mouseAdapter;
     private Painel painel;
+    private Map<Painel,List<BlocoArrastavel>> tabelaPainel = new HashMap<>();
 
     public TelaBlocos(int largura, int altura) {
         tela = new JPanel();
@@ -61,7 +64,7 @@ public class TelaBlocos implements Observer<MouseAdapterBlocos> {
         return blocoNovo;
     }
 
-    public void trocaPainel(BlocoArrastavel bloco, BlocoInvolucro bloco2) {
+    public void juntaBlocos(BlocoArrastavel bloco, BlocoInvolucro bloco2) {
         Iterator<BlocoArrastavel> it = bloco.iterator();
         this.getTela().remove(bloco.getBloco());
         blocos.remove(bloco);
@@ -130,7 +133,21 @@ public class TelaBlocos implements Observer<MouseAdapterBlocos> {
     }
 
     public void setPainel(Painel painel) {
+       
+        if (this.painel != null){
+            tabelaPainel.put(this.painel, blocos);
+        }
+        if (tabelaPainel.containsKey(painel)){
+            this.blocos = tabelaPainel.get(painel);
+        } else {
+            this.blocos = new ArrayList<>();
+        }
         this.painel = painel;
+        tela.removeAll();
+        for (BlocoArrastavel b: this.blocos){
+            tela.add(b.getBloco());
+        }
+        tela.repaint();
     }
 
     public Painel getPainel() {

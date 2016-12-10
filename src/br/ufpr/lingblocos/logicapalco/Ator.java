@@ -5,6 +5,8 @@
  */
 package br.ufpr.lingblocos.logicapalco;
 
+import br.ufpr.lingblocos.logicablocos.Painel;
+
 /**
  *    pub    public abstract void gire(Integer g);
 lic abstract void gire(Integer g);
@@ -14,19 +16,25 @@ lic abstract void gire(Integer g);
 public abstract class Ator {
     protected int x;
     protected int y;
+    //criar direcao
+    protected int direcao;
     protected Desenhador desenhador;
     protected Palco palco;
+    protected Painel painel;
 
     public Ator(int x, int y) {
         this.x = x;
         this.y = y;
+        painel = new Painel(this);
     }
 
     public abstract void desenhar();
     public abstract boolean dentro(int x, int y);
     public abstract void redimensionaAtor(Integer rx, Integer ry);
     
-     public abstract void gire(int g);
+     public  void gire(int g){
+         System.out.println("girando na tela");
+     }
     
 
     public void setDesenhador(Desenhador desenhador) {
@@ -44,4 +52,5 @@ public abstract class Ator {
     public void setPalco(Palco palco) {
         this.palco = palco;
     }
+
 }

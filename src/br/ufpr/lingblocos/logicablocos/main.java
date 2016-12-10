@@ -57,7 +57,7 @@ public class main {
 //            
 //        };
         Desenhador desenhador = new DesenhadorAWT(telaDesenho);
-        Palco palco = new Palco(desenhador);
+        Palco palco = new Palco(desenhador,telaBlocos);
         Ator ator = new Elipse(100, 100, 200, 300);
         palco.inserirAtor(ator);
         Painel painel = new Painel(ator);

@@ -89,7 +89,7 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLUE);
         g.drawRect(x, y, largura, altura);
-
+        
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());        
     }
     

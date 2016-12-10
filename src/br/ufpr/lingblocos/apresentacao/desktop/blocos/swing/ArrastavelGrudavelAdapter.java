@@ -48,7 +48,7 @@ public class ArrastavelGrudavelAdapter extends ArrastavelAdapter {
                 if (!(p instanceof BlocoInvolucro)) {
                     p = tela.embrulha(p);
                 }
-                tela.trocaPainel(bloco, (BlocoInvolucro) p);
+                tela.juntaBlocos(bloco, (BlocoInvolucro) p);
                 break;
             }
         }

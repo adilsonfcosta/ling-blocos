@@ -5,8 +5,6 @@
  */
 package br.ufpr.lingblocos.logicablocos;
 
-import br.ufpr.lingblocos.logicapalco.Ator;
-
 /**
  *
  * @author helio
