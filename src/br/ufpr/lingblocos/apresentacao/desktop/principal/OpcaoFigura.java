@@ -17,6 +17,9 @@ public enum OpcaoFigura {
     LIVRE,
     PONTO,
     SELECAO,
+    LIMPAR_SELECAO,
+    AGRUPAR,
+    DESAGRUPAR,
     REDIMENSIONAR;
 
 }

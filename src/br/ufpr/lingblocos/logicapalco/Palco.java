@@ -16,11 +16,14 @@ import java.util.Set;
  */
 public class Palco {
         
-    Desenhador desenhador;   
+    Desenhador desenhador;
+    int x_mintira;
+    int y_mintira;
+    
      
     private List<Ator> atores = new LinkedList();
     private Set<Ator> selecionados = new HashSet<>();
-    private List<Ator> agrupado = new LinkedList();
+    
     
     public Palco(Desenhador desenhador) {
         this.desenhador = desenhador;
@@ -28,13 +31,10 @@ public class Palco {
     
     public void selecionarAtor(int x, int y) {
         //System.out.println(x+ " " +y);
-                
+        
         for (Ator a : atores) {
             if (a.dentro(x, y)) {
                 selecionados.add(a);
-//                System.out.println("TO DENTRO >>" + a.toString());   
-//            } else {
-//                System.out.println("to fora >>" + a.toString());   
             }
         }
         
@@ -61,6 +61,8 @@ public class Palco {
     }
     
     public void agrupar(){
-        // l impar palco e AtorComposto depois de criar o AtorComposto
+        // limpar palco e AtorComposto depois de criar o AtorComposto
+        AtorComposto atorComposto = new AtorComposto(x_mintira, y_mintira, selecionados);
+                
     }
 }

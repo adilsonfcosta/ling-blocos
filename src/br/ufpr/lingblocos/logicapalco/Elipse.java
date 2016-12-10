@@ -10,10 +10,10 @@ package br.ufpr.lingblocos.logicapalco;
  * @author Lenovo
  */
 public class Elipse extends Ator{
-
+    
     int largura;
     int altura;
-            
+    
     public Elipse(int x, int y, int largura, int altura) {
         super(x, y);
         this.largura = largura;
@@ -33,12 +33,15 @@ public class Elipse extends Ator{
 
 
     @Override
-    public void redimencionaAtor(Integer rx, Integer ry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void redimensionaAtor(Integer rx, Integer ry) {
+        this.largura += rx;
+        this.altura += ry;
     }
 
     @Override
     public void gire(Integer g) {
+       
+        
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

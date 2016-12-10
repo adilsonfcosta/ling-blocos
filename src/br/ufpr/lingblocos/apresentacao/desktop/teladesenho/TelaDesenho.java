@@ -87,8 +87,9 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
      */
     public void desenhaRetangulo(int x, int y, int largura, int altura) {
         Graphics2D g = imagemAtual.createGraphics();
-        g.setColor(Color.BLACK);
+        g.setColor(Color.BLUE);
         g.drawRect(x, y, largura, altura);
+
         tela.paintImmediately(0, 0, tela.getWidth(), tela.getHeight());        
     }
 

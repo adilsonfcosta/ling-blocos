@@ -11,9 +11,9 @@ import br.ufpr.lingblocos.logicapalco.Ator;
  *
  * @author helio
  */
-public class BlocoRedimenciona extends BlocoSimples{
+public class BlocoRedimensiona extends BlocoSimples{
     
-    public BlocoRedimenciona(){
+    public BlocoRedimensiona(){
         
         campos.put("rx",new Campo<>(0));
         campos.put("ry",new Campo<>(0));
@@ -30,7 +30,7 @@ public class BlocoRedimenciona extends BlocoSimples{
         ry = (Integer) campos.get("ry").getValor();
         
         //EU ACHO QUE AQUI CHAMA A FUNÇÃO DO ATOR
-        ator.redimencionaAtor(rx,ry); 
+        ator.redimensionaAtor(rx,ry); 
         
         
     }

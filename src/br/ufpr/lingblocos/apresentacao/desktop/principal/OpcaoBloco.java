@@ -15,6 +15,7 @@ public enum OpcaoBloco {
     GIRE,
     REPITA,
     ESPERE,
+    REDIMENSIONA,
     SOMA;
 
 }

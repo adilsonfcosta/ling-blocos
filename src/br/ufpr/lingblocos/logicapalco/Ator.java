@@ -6,7 +6,9 @@
 package br.ufpr.lingblocos.logicapalco;
 
 /**
- *
+ *    pub    public abstract void gire(Integer g);
+lic abstract void gire(Integer g);
+
  * @author Lenovo
  */
 public abstract class Ator {
@@ -22,12 +24,15 @@ public abstract class Ator {
 
     public abstract void desenhar();
     public abstract boolean dentro(int x, int y);
-    public abstract void redimencionaAtor(Integer rx, Integer ry);
-    public abstract void gire(Integer g);
+    public abstract void redimensionaAtor(Integer rx, Integer ry);
+    
+     public abstract void gire(Integer g);
+    
 
     public void setDesenhador(Desenhador desenhador) {
         this.desenhador = desenhador;
     }
+    
 
     public void mover(Integer dx, Integer dy) {
         this.x += dx;

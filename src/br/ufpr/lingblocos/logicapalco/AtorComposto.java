@@ -5,32 +5,33 @@
  */
 package br.ufpr.lingblocos.logicapalco;
 
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  *
  * @author cassiele
  */
-public class LinhaLivre extends Ator {
+public class AtorComposto extends Ator {
     
-    private Desenhador desenhador;
-    private List<Ponto> ponto;  
-
-    public LinhaLivre(int x, int y) {
+    private List<Ator> agrupado = new LinkedList();
+    
+    public AtorComposto(int x, int y, Collection <Ator> selecionados) {
         super(x, y);
+        agrupado.addAll(selecionados);    
     }
+    
 
     @Override
     public void desenhar() {
-        desenhador.desenhaLinhaLivre();
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean dentro(int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-
 
     @Override
     public void redimensionaAtor(Integer rx, Integer ry) {
@@ -42,6 +43,5 @@ public class LinhaLivre extends Ator {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-
-
+    
 }

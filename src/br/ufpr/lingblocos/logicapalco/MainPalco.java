@@ -5,7 +5,10 @@
  */
 package br.ufpr.lingblocos.logicapalco;
 
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterLimparSelecao;
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterAgrupar;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterBlocos;
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterDesagrupar;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterElipse;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterEspere;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterFigura;
@@ -39,6 +42,7 @@ public class MainPalco {
        Desenhador desenhador = new DesenhadorAWT(telaDesenho);
        Palco palco = new Palco(desenhador);
        MouseAdapterSeleciona seleciona = new MouseAdapterSeleciona(telaDesenho, palco);
+       //-MouseAdapterAgrupar agrupar = new MouseAdapterAgrupar(telaDesenho, palco);
        
        //Adicionando relação de opções de figuras com mouse listeners:
        // (vocês terão que ir adicionando à medida que novas figuras 
@@ -48,7 +52,11 @@ public class MainPalco {
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.ELIPSE, new MouseAdapterElipse(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.TRIANGULO, new MouseAdapterTriangulo(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETA, new MouseAdapterLinhaReta(telaDesenho, palco));
-       relacaoOpcaoFiguraMouse.put(OpcaoFigura.SELECAO, seleciona);
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.SELECAO, new MouseAdapterSeleciona(telaDesenho, palco));
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.LIMPAR_SELECAO, new MouseAdapterLimparSelecao(telaDesenho, palco));
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.AGRUPAR, new MouseAdapterAgrupar(telaDesenho, palco));
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.DESAGRUPAR, new MouseAdapterDesagrupar(telaDesenho, palco));
+       
        janela.setupMouseAdaptersFigura(relacaoOpcaoFiguraMouse);
        
        //Adicionando relação de opções de blocos com mouse listeners:
